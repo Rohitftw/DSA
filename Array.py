@@ -88,4 +88,76 @@ arr = list(map(int, input("Enter elements: ").split()))
 #         j += 1
 # print(arr)
 
+# Linear Search
+# n = int(input("Enter the number"))
+# for i in range(len(arr)):
+#     if n == arr[i]:
+#         print(i)
 
+# union of two sorted arr
+# def union(arr, arr2):
+#     i, j = 0, 0
+#     union_array = []
+#
+#     while i < len(arr) and j < len(arr2):
+#         if arr[i] <= arr2[j]:
+#             if len(union_array) == 0 or union_array[-1] != arr[i]:
+#                 union_array.append(arr[i])
+#             i += 1
+#         else:
+#             if len(union_array) == 0 or union_array[-1] != arr2[j]:
+#                 union_array.append(arr2[j])
+#             j += 1
+#
+#     while i < len(arr):  # remaining arr1
+#         if len(union_array) == 0 or union_array[-1] != arr[i]:
+#             union_array.append(arr[i])
+#         i += 1
+#
+#     while j < len(arr2):  # remaining arr2
+#         if len(union_array) == 0 or union_array[-1] != arr2[j]:
+#             union_array.append(arr2[j])
+#         j += 1
+#
+#     return union_array
+#
+#
+# arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# arr2 = [2, 3, 4, 4, 5, 11, 12]
+#
+# print(union(arr, arr2))
+
+
+# Intersection of two sorted array
+
+# def intersection(arr1, arr2):
+# #     i, j = 0, 0
+# #     result = []
+# #     while i < len(arr1) and j < len(arr2):
+# #         if arr1[i] == arr2[j]:
+# #             result.append(arr1[i])
+# #             i += 1
+# #             j += 1
+# #         elif arr1[i] > arr2[j]:
+# #             j += 1
+# #         elif arr1[i] < arr2[j]:
+# #             i += 1
+# #     return result
+# # arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# # arr2 = [2, 3, 4, 4, 5, 11, 12]
+# # print(intersection(arr1, arr2))
+
+
+# Find missing number in an array
+N = int(input("Enter the number"))
+def missingNumber(arr, N):
+    xor1 = 0
+    xor2 = 0
+
+    for i in range(N - 1):
+        xor2 = xor2 ^ a[i]  # XOR of array elements
+        xor1 = xor1 ^ (i + 1)  # XOR up to [1...N-1]
+
+    xor1 = xor1 ^ N  # XOR up to [1...N]
+
+    return xor1 ^ xor2
