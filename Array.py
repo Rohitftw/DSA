@@ -161,3 +161,15 @@ def missingNumber(arr, N):
     xor1 = xor1 ^ N  # XOR up to [1...N]
 
     return xor1 ^ xor2
+
+def findMaxConsecutiveOnes(arr):
+    count = 0
+    maximum = 0
+    for i in range(len(arr)):
+        if arr[i] == 1:
+            count += 1
+        else:
+            count = 0
+        maximum = max(maximum, count)
+    return maximum
+
