@@ -9,7 +9,7 @@ arr = list(map(int, input("Enter elements: ").split()))
 #
 # print(arr)
 
-# Bubble Sort TC: Best and avg = O(n^2) but best can be O(n)
+# Bubble Sort TC: worst and avg = O(n^2) but best can be O(n)
 # for i in range(len(arr)):
 #     swap = 0
 #     for j in range(len(arr)-i - 1):
@@ -22,11 +22,15 @@ arr = list(map(int, input("Enter elements: ").split()))
 
 
 # Insertion Sort TC: worst and avg O(n^2) and best O(n^2)
-# for i in range(len(arr)):
-#     j = i
-#     while j < 0 and arr[j - 1] > arr[j]:
-#         arr[j - 1], arr[j] = arr[j], arr[j - 1]
-# print(arr)
+# def insertion_sort(arr):
+#     n = len(arr)
+#     for i in range(n):   # i = 0 to n-1
+#         j = i
+#         while j > 0 and arr[j - 1] > arr[j]:
+#             # swap arr[j-1] and arr[j]
+#             arr[j - 1], arr[j] = arr[j], arr[j - 1]
+#             j -= 1
+#     return arr
 
 
 # Merge Sort TC: O(nlogn)
