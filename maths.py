@@ -41,9 +41,8 @@ n = int(input("Enter the number"))
 #         count+=1
 #         print(i)
 #     if i != int(n/i):
-#         if n%(n/i) == 0:
-#             count+=1
-#             print(int(n/i))
+#         count+=1
+#         print(int(n/i))
 
 #prime
 # count = 0
